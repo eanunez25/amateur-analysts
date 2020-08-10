@@ -1,0 +1,27 @@
+<%= form_with(model: equity, local: true) do |form| %>
+  <% if equity.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(equity.errors.count, "error") %> prohibited this equity from being saved:</h2>
+
+      <ul>
+        <% equity.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :ticker %>
+    <%= form.text_field :ticker %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
