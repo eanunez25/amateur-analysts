@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Buyprice:</strong>
+  <%= @price.buyprice %>
+</p>
+
+<p>
+  <strong>Equity:</strong>
+  <%= @price.equity_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @price.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_price_path(@price) %> |
+<%= link_to 'Back', prices_path %>
