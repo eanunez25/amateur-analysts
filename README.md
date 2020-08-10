@@ -1,24 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This site will allow users to post their calculated purchasing price on different equities. Users can update prices and delete equities from their watchlist as equity fundamentals change.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Ideas
+- Follow other users and be able to inlude their watchlist in homepage
