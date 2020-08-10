@@ -4,3 +4,6 @@ This site will allow users to post their calculated purchasing price on differen
 
 ## Ideas
 - Follow other users and be able to inlude their watchlist in homepage
+
+## To Do List
+- 
