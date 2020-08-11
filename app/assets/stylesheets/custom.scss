@@ -61,13 +61,17 @@ p {
   color: #fff;
   text-transform: uppercase;
   letter-spacing: -1px;
-  padding-top: 12px;
+  padding-top: 1px;
   font-weight: bold;
 }
 
 #logo:hover {
   color: #fff;
   text-decoration: none;
+}
+
+.navbar-inverse {
+  background-color: #192245;
 }
 
 

@@ -1,12 +1,15 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
-    <%= link_to "Amateur Analysts", "#", id: "logo" %>
+    <!--<%= link_to "Amateur Analysts", root_path, id: "logo" %>-->
+    <%= link_to image_tag("amateuranalystslogo.PNG", alt: "Amateur Analysts logo", width: "125"), 
+                      root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home", "#" %></li>
-        <li><%= link_to "Help", "#" %></li>
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "Help", help_path %></li>
         <li><%= link_to "Log In", "#" %></li>
       </ul>
     </nav>
   </div>
+  
 </header>
