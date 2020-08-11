@@ -16,8 +16,8 @@
     <% @prices.each do |price| %>
       <tr>
         <td><%= price.buyprice %></td>
-        <td><%= price.equity_id %></td>
-        <td><%= price.user_id %></td>
+        <td><%= Equity.find_by(id: price.equity_id).ticker %></td>
+        <td><%= User.find_by(id: price.user_id).username %></td>
         <td><%= link_to 'Show', price %></td>
         <td><%= link_to 'Edit', edit_price_path(price) %></td>
         <td><%= link_to 'Destroy', price, method: :delete, data: { confirm: 'Are you sure?' } %></td>
