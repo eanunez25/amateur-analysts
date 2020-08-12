@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  attr_accessor :username, :email
 
   # GET /users
   # GET /users.json
@@ -69,6 +70,6 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.require(:user).permit(:username)
+      params.require(:user).permit(:username, :email)
     end
 end
