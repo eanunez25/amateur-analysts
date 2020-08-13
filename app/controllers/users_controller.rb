@@ -84,7 +84,7 @@ class UsersController < ApplicationController
     # confirms the correct user
     def correct_user
       @user = User.find(params[:id])
-      if @user == current_user
+      if current_user?(@user)
         return
       else
         flash[:danger] = "Can't edit another user's information."
