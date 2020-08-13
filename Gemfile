@@ -25,6 +25,9 @@ gem 'jbuilder', '~> 2.7'
 gem 'bcrypt', '~> 3.1.7'
 # faker to seed db with sample users
 gem 'faker'
+# paginate
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
