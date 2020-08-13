@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_13_010731) do
+ActiveRecord::Schema.define(version: 2020_08_13_222021) do
 
   create_table "equities", force: :cascade do |t|
     t.string "ticker"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2020_08_13_010731) do
     t.string "email"
     t.string "password_digest"
     t.string "remember_digest"
+    t.boolean "admin", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
