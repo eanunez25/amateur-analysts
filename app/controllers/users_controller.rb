@@ -50,6 +50,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+    @user = User.find(params[:id])
+  end
+
   # DELETE /users/1
   # DELETE /users/1.json
   def destroy
