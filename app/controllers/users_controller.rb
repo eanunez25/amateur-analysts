@@ -32,9 +32,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      log_in @user
-      flash[:success] = "Welcome to Amateur Analysts!"
-      redirect_to @user
+      UserMailer.account_activation(@user).deliver_now
+      flash[:info] = "Please check your email to activate your account."
+      redirect_to root_url
     else
       render 'new'
     end
@@ -96,4 +96,12 @@ class UsersController < ApplicationController
     def admin_user
       redirect_to(root_url) unless current_user.admin?
     end
+
+    # returns true if the given token matches the digest
+    def authenticated?(attribute, token)
+      digest = send("#{attribute}_digest")
+      return false if digest.nil?
+      BCrypt::Password.new(digest).is_password?(token)
+    end
+    
 end
