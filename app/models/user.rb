@@ -54,11 +54,22 @@ class User < ApplicationRecord
     self.activation_digest = User.digest(activation_token)
   end
 
-    # returns true if the given token matches the digest
-    def authenticated?(attribute, token)
-      digest = send("#{attribute}_digest")
-      return false if digest.nil?
-      BCrypt::Password.new(digest).is_password?(token)
-    end
+  # returns true if the given token matches the digest
+  def authenticated?(attribute, token)
+    digest = send("#{attribute}_digest")
+    return false if digest.nil?
+    BCrypt::Password.new(digest).is_password?(token)
+  end
+
+  # activates an account
+  def activate
+    update_attribute(:activated, true)
+    update_attribute(:acticated_at, Time.zone.now)
+  end
+
+  #sends an activation email
+  def send_activation_email
+    UserMailer.account_activation(self).deliver_now
+  end
 
 end
