@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.paginate(page: params[:page]).where(activated: true)
+    @users = User.paginate(page: params[:page])
   end
 
   # GET /users/1
