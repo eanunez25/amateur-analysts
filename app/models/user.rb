@@ -14,6 +14,7 @@ class User < ApplicationRecord
   has_many :prices, dependent: :destroy
   has_many :equities, through: :prices
   has_many :microposts, dependent: :destroy
+  has_many :active_relationships, class_name: "Relationship", foreign_key: "follower_id", dependent: :destroy
 
   # Returns the hash digest of the given string.
   def User.digest(string)
