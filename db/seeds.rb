@@ -7,6 +7,14 @@ User.create!(username: "ElvinAdminOverlord",
               activated: true,
               activated_at: Time.zone.now) 
 
+User.create!(username: "marissapotato",
+              email: "marissa.jain@gmail.com",
+              password: "foobar",
+              password_confirmation: "foobar",
+              admin: true, 
+              activated: true,
+              activated_at: Time.zone.now) 
+
 # generate a bunch of additional users
 99.times do |n|
   username = "Username#{n+1}"

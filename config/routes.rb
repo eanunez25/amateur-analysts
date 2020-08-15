@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'relationships/create'
+  get 'relationships/destroy'
   get 'password_resets/new'
   get 'password_resets/edit'
   get 'sessions/new'
